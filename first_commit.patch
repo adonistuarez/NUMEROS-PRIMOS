@@ -1,0 +1,173 @@
+Subject: [PATCH] first commit
+---
+Index: Diagrama-programa/NumerosPrimos/src/NumerosPrimos.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/src/NumerosPrimos.java b/Diagrama-programa/NumerosPrimos/src/NumerosPrimos.java
+new file mode 100644
+--- /dev/null	(date 1716911331613)
++++ b/Diagrama-programa/NumerosPrimos/src/NumerosPrimos.java	(date 1716911331613)
+@@ -0,0 +1,33 @@
++import java.util.Scanner;
++
++public class NumerosPrimos {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++
++        System.out.print("Enter the number: ");
++        int n = scanner.nextInt();
++
++        int count = 0;
++        int num = 2;
++
++        while (count < n) {
++            if (esPrimo(num)) {
++                System.out.print(num + " ");
++                count++;
++            }
++            num++;
++        }
++    }
++
++    private static boolean esPrimo(int number) {
++        if (number <= 1) {
++            return false;
++        }
++        for (int i = 2; i * i <= number; i++) {
++            if (number % i == 0) {
++                return false;
++            }
++        }
++        return true;
++    }
++}
+Index: Diagrama-programa/NumerosPrimos/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/.gitignore b/Diagrama-programa/NumerosPrimos/.gitignore
+new file mode 100644
+--- /dev/null	(date 1716907776031)
++++ b/Diagrama-programa/NumerosPrimos/.gitignore	(date 1716907776031)
+@@ -0,0 +1,29 @@
++### IntelliJ IDEA ###
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: Diagrama-programa/NumerosPrimos/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/.idea/modules.xml b/Diagrama-programa/NumerosPrimos/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1716907779009)
++++ b/Diagrama-programa/NumerosPrimos/.idea/modules.xml	(date 1716907779009)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/NumerosPrimos.iml" filepath="$PROJECT_DIR$/NumerosPrimos.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: Diagrama-programa/NumerosPrimos/NumerosPrimos.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/NumerosPrimos.iml b/Diagrama-programa/NumerosPrimos/NumerosPrimos.iml
+new file mode 100644
+--- /dev/null	(date 1716907778968)
++++ b/Diagrama-programa/NumerosPrimos/NumerosPrimos.iml	(date 1716907778968)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: Diagrama-programa/NumerosPrimos/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/.idea/misc.xml b/Diagrama-programa/NumerosPrimos/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1716907779118)
++++ b/Diagrama-programa/NumerosPrimos/.idea/misc.xml	(date 1716907779118)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: Diagrama-programa/NumerosPrimos/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/.idea/.gitignore b/Diagrama-programa/NumerosPrimos/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1716907783391)
++++ b/Diagrama-programa/NumerosPrimos/.idea/.gitignore	(date 1716907783391)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: Diagrama-programa/NumerosPrimos/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diagrama-programa/NumerosPrimos/.idea/vcs.xml b/Diagrama-programa/NumerosPrimos/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1716907793950)
++++ b/Diagrama-programa/NumerosPrimos/.idea/vcs.xml	(date 1716907793950)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
